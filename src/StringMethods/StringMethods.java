@@ -3,6 +3,8 @@ package StringMethods;
 import java.util.Arrays;
 import java.util.Base64;
 
+import javax.swing.JOptionPane;
+
 /*
 Visit the JavaDocs for the String class to view everything you can do with a String.  
 
@@ -36,22 +38,27 @@ public class StringMethods {
 			return s1;
 			
 		}
-		else if(s2.length()>s1.length()) {
+		else  {
 			return s2;
 		}
-		return null;
-		
 	}
+		
+	
 
+	
 	
 	// if String s contains the word "underscores", change all of the spaces to underscores
 	public static String formatSpaces(String s) {
-		if(s.contains("underscores")) {
-			s.replace(" ", "_");
+		if(s.contains("underscores")==true) {
+			s=s.replaceAll(" ", "_");
+			
 		}
+	
+			
+		
 		return s;
+	
 	}
-
 	
 	// Return the name of the person whose LAST name would appear first if they were in alphabetical order
 	// You cannot assume there are no extra spaces around the name, but you can
@@ -63,9 +70,11 @@ public class StringMethods {
 	
 	// Return the sum of all numerical digits in the String
 	public static int numeralSum(String s) {
-		int y = Integer.parseInt(s);
-
-		return y;
+		String newString = s.replaceAll("[a-zA-Z]","");
+	
+		
+JOptionPane.showMessageDialog(null, s);		
+return 1;
 	}
 	
 	
@@ -81,7 +90,9 @@ public class StringMethods {
 
 	// Call Utitilities.encrypt to encrypt String s
 	public static String encrypt(String s, char key) {
+		Utilities.encrypt(s, key);
 		return null;
+		
 	}
 
 	// Call Utilities.decrypt to decrypt the cyphertext
