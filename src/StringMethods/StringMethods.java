@@ -90,14 +90,14 @@ return 1;
 
 	// Call Utitilities.encrypt to encrypt String s
 	public static String encrypt(String s, char key) {
-		Utilities.encrypt(s, key);
-		return null;
+		
+		return Utilities.encrypt(s.getBytes(), (byte)key);
 		
 	}
 
 	// Call Utilities.decrypt to decrypt the cyphertext
 	public static String decrypt(String s, char key) {
-		return null;
+		return Utilities.decrypt(s, (byte) key);
 	}
 
 
