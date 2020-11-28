@@ -70,11 +70,21 @@ public class StringMethods {
 	
 	// Return the sum of all numerical digits in the String
 	public static int numeralSum(String s) {
-		String newString = s.replaceAll("[a-zA-Z]","");
+		System.out.println(s);
+		int z =0;
+	for(int i=0; i<s.length(); i++) {
+		char str = s.charAt(i);
+		System.out.println(str);
+		if(Character.isDigit(str)) {
+		z =	z + Character.getNumericValue(str);
+		}
+	}
+	System.out.println(z);
+	return z;
 	
-		
-JOptionPane.showMessageDialog(null, s);		
-return 1;
+	
+
+
 	}
 	
 	
@@ -104,6 +114,11 @@ return 1;
 	// Return the number of words in String s that end with String substring
 	// You can assume there are no punctuation marks between words
 	public static int wordsEndsWithSubstring(String s, String substring) {
+		int x=0;
+		for(int i=0; substring.contains(s); i++) {
+			
+			substring.lastIndexOf(s);
+		}
 		return 0;
 	}
 	
