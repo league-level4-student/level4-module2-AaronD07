@@ -70,16 +70,14 @@ public class StringMethods {
 	
 	// Return the sum of all numerical digits in the String
 	public static int numeralSum(String s) {
-		System.out.println(s);
 		int z =0;
 	for(int i=0; i<s.length(); i++) {
 		char str = s.charAt(i);
-		System.out.println(str);
 		if(Character.isDigit(str)) {
 		z =	z + Character.getNumericValue(str);
 		}
 	}
-	System.out.println(z);
+	
 	return z;
 	
 	
