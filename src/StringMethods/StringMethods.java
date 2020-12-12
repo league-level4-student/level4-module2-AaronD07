@@ -125,7 +125,11 @@ public class StringMethods {
 	// of String substring and the final occurrence
 	// You can assume that substring will appear at least twice
 	public static int distance(String s, String substring) {
-		return 0;
+		
+		String str = s.substring(s.indexOf(substring)+substring.length(), s.lastIndexOf(substring));
+		int x =str.length();
+		return x;
+
 	}
 
 
